@@ -1,11 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Button, Text, View } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+const Drawer = createDrawerNavigator();
+
+import HomeScreen from './screen/home/Home';
+import NotificationScreen from './screen/notification/Notification';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="Notifications" component={NotificationScreen} />
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
 }
 
