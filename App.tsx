@@ -7,6 +7,7 @@ const Drawer = createDrawerNavigator();
 import HomeScreen from './screen/home/Home';
 import NotificationScreen from './screen/notification/Notification';
 import Tools from './screen/tools/Tools';
+import Orders from './screen/orders/Orders';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="Notifications" component={NotificationScreen} />
         <Drawer.Screen name="Tools" component={Tools} />
+        <Drawer.Screen name="Orders" component={Orders} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
